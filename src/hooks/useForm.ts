@@ -1,9 +1,11 @@
 import { useState, ChangeEvent } from 'react';
 
-export const useForm = <T>(initialValue: T): [ T, (e: ChangeEvent<HTMLInputElement>) => void, () => void ] => {
+export const useForm = <T>(initialValue: T): [ T, (e: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>) => void, () => void ] => {
   const [ form, setForm ] = useState(initialValue);
 
-  const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (
+    e: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
     setForm({
       ...form,
@@ -12,7 +14,7 @@ export const useForm = <T>(initialValue: T): [ T, (e: ChangeEvent<HTMLInputEleme
   }
 
   const resetForm = () => {
-    setForm(Object.assign({}));
+    
   }
 
   return [ form, handleInputChange, resetForm ]

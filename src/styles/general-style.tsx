@@ -6,6 +6,10 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     font-size: 16px;
     font-family: 'Lato', sans-serif;
+  };
+
+  textarea {
+    font-family: 'Lato', sans-serif;
   }
 `
 

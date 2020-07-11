@@ -1,11 +1,15 @@
 import styled, { css } from 'styled-components';
-import { mnHeight, primaryColor } from './../styles/variables-style'
+import { mnHeight, primaryColor, secondaryColor } from './../styles/variables-style'
+
+type InputElementSize = 'small' | 'default' | 'big';
 
 interface IButtonProps {
   readonly primary?: boolean;
   readonly block?: boolean;
   readonly outline?: boolean;
   readonly link?: boolean;
+  readonly secondary?: boolean;
+  readonly size?: InputElementSize;
 };
 
 const Button = styled.button<IButtonProps>`
@@ -49,6 +53,23 @@ const Button = styled.button<IButtonProps>`
     box-shadow: none;
     text-decoration: underline;
     background-color: transparent;
+  `}
+
+  ${props => props.secondary && css`
+    color: ${primaryColor};
+    background-color: ${secondaryColor};
+  `}
+
+  ${props => props.secondary && props.outline && css`
+    color: ${secondaryColor};
+    background-color: transparent;
+    border: 1px solid ${secondaryColor};
+    box-shadow: 0 3px 0 ${secondaryColor};
+  `}
+
+  ${props => props.size === 'small' && css`
+      height: initial;
+      padding: .25rem .5rem;
   `}
 `
 

@@ -4,5 +4,13 @@
   "password": "Contraseña",
   "register": "Regístrate",
   "createAccount": "Crea una cuenta",
-  "fullNamePlaceholder": "Nombre completo"
+  "fullNamePlaceholder": "Nombre completo",
+  "myNotes": "Mis notas",
+  "notetitlePlaceholder": "Título de la nota",
+  "notePlaceholder": "Contenido de la nota",
+  "clearNote": "Limpiar nota",
+  "saveNote": "Guardar nota",
+  "logout": "Cerrar sesión",
+  "greeting": "Hola, ",
+  "createNote": "Nueva nota"
 }
