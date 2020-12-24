@@ -6,7 +6,21 @@ import {
 import PublicRouter from "./Public.router"
 import PrivateRouter from "./Private.router"
 
+import { useDispatch } from 'react-redux'
+import { ADD_USER } from "./../store/actions/user.actions";
+
 const NotesAppRouter = () => {
+
+  const dispatch = useDispatch()
+  const user = localStorage.getItem('user')
+
+  if (!!user) {
+    dispatch({
+      type: ADD_USER,
+      payload: JSON.parse(user)
+    })
+  }
+
   return (
     <Router>
       <Switch>

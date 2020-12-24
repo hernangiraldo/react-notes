@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { mnHeight, borders, primaryColor } from './../styles/variables-style'
+import { mnHeight, borders, primaryColor, dangerColor } from './../styles/variables-style'
 
 const Input = styled.input`
   height: ${mnHeight};
@@ -14,6 +14,10 @@ const Input = styled.input`
 
   &:focus {
     border-color: ${primaryColor}
+  }
+
+  &.input-error {
+    border-color: ${dangerColor}
   }
 `
 

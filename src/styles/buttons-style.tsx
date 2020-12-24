@@ -21,6 +21,7 @@ const Button = styled.button<IButtonProps>`
   cursor: pointer;
   box-shadow: 0 3px 0 rgba(20, 2, 34 , 1);
   font-size: 1rem;
+  transition: all .2s;
 
   &:hover {
     filter: brightness(1.2);
@@ -46,6 +47,10 @@ const Button = styled.button<IButtonProps>`
     color: ${primaryColor};
     border: 1px solid ${primaryColor};
     box-shadow: 0 3px 0 ${primaryColor};
+
+    &:hover {
+      background-color: rgba(204, 204, 204, .9)
+    }
   `}
 
   ${props => props.link && css`
@@ -65,6 +70,10 @@ const Button = styled.button<IButtonProps>`
     background-color: transparent;
     border: 1px solid ${secondaryColor};
     box-shadow: 0 3px 0 ${secondaryColor};
+
+    &:hover {
+      background-color: transparent;
+    }
   `}
 
   ${props => props.size === 'small' && css`

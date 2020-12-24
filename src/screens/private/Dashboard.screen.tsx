@@ -7,6 +7,7 @@ import { borders, primaryColor } from '../../styles/variables-style'
 import { useForm } from '../../hooks/useForm'
 import { INewNoteDto } from '../../models/dto/iNewNote.dto'
 
+
 const Form = styled.form`
   padding: 1rem;
   display: grid;

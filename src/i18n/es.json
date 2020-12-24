@@ -12,5 +12,8 @@
   "saveNote": "Guardar nota",
   "logout": "Cerrar sesión",
   "greeting": "Hola, ",
-  "createNote": "Nueva nota"
+  "createNote": "Nueva nota",
+  "inputRequired": "Este campo es requerido",
+  "invalidFormat": "Formato inválido",
+  "invalidEmail": "El formato del correo electrónico es inválido"
 }

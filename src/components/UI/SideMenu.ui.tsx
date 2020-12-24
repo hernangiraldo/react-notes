@@ -11,6 +11,10 @@ const Aside = styled.aside`
   overflow: scroll;
   scroll-behavior: smooth;
   position: relative;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 `
 
 const Footer = styled.footer`
